@@ -11,7 +11,7 @@ class App extends Component {
   componentDidMount = async () => {
     try {
 
-
+      this.state = {newValue: ''};
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
       // Get network provider and web3 instance.
@@ -75,11 +75,16 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Welcome to this DAPP!!</h1>
-        <div>Stored string : {this.state.storageValue}</div>
+        
         <form onSubmit={this.handleSubmit}>
-          <input placeholder="enter a string" type="text" value={this.state.newValue} onChange={this.handleChange.bind(this)}></input>
+        <label>
+        enter a string : {" "}
+         <input placeholder="enter a string" type="text" value={this.state.newValue} onChange={this.handleChange.bind(this)}></input>
+        </label>
+         
           {/** <button type="button">Click Me!</button>*/}
         </form>
+        <div>Stored string : {this.state.storageValue}</div>
       </div>
     );
   }
