@@ -11,7 +11,7 @@ class App extends Component {
   componentDidMount = async () => {
     try {
 
-      this.state = {newValue: ''};
+    
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
       // Get network provider and web3 instance.
